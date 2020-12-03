@@ -1,0 +1,72 @@
+name: Salsah Model Extraction
+
+on:
+  workflow_dispatch: # trigger manually
+
+# globals
+env:
+  SCRIPT_DIR: 1_salsah-model-extraction
+  ARCHIVE_DIR: archive
+
+
+jobs:
+  extract_salsah_model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Check for existing JSON file
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: |
+          count=$(ls -1 *.json 2>/dev/null | wc -l)         
+          if [ $count -ge 1 ]; then
+            echo "### Need to archive $count old file(s)..."
+            if [ ! -d $ARCHIVE_DIR/ ]; then
+              echo "Creating $ARCHIVE_DIR/ folder"
+              mkdir -p $ARCHIVE_DIR/
+            fi
+            for file in *.json; do 
+              echo "Moving $file into $ARCHIVE_DIR/"
+              mv "$file" $ARCHIVE_DIR/
+            done
+          fi
+          
+      - name: Run extraction script
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: python SalsahModelToJson.py
+      
+      - name: Check git status before commit
+        run: |
+          git config --get remote.origin.url
+          git status
+          
+      - name: Configure git
+        run: |
+          echo "Configuring git"
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+    
+      - name: Commit files
+        run: |
+          echo "Running git commit"
+          git add .
+          git commit -m "Auto-commit of SALSAH model extraction from ${{ github.repository }}@${{ github.sha }}"
+
+      - name: Push changes
+        run: git push origin HEAD:main
+    
+      - name: Congratulations
+        if: ${{ success()
+        run: echo "🎉 New SALSAH model extraction completed 🎊"
