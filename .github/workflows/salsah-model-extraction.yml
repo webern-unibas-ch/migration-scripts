@@ -68,5 +68,5 @@ jobs:
         run: git push origin HEAD:main
     
       - name: Congratulations
-        if: ${{ success()
+        if: success()
         run: echo "🎉 New SALSAH model extraction completed 🎊"
