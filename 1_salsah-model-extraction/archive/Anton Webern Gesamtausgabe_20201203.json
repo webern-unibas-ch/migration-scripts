@@ -2511,7 +2511,7 @@
                             {
                                 "propname": "sourceDesc_pagination_rt",
                                 "comments": {
-                                    "de": "Paginierung"
+                                    "id": "Paginierung"
                                 },
                                 "cardinality": "0-n"
                             },
@@ -3235,7 +3235,7 @@
                             {
                                 "propname": "address",
                                 "comments": {
-                                    "no": "Adresse (Strassenname, Nummer etc.)"
+                                    "de": "Adresse (Strassenname, Nummer etc.)"
                                 },
                                 "cardinality": "0-n"
                             },
