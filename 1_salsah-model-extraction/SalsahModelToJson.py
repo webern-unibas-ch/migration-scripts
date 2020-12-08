@@ -441,5 +441,5 @@ if __name__ == '__main__':
             #pprint("FetchProperties")
             salsahJson.fetchProperties(projects)
             # Creating the new json files
-            f = open(projects["longname"] + "_" + now + ".json", 'w')
+            f = open(projects["shortname"] + "_" + now + ".json", 'w')
             f.write(json.dumps(tmpOnto, indent=4))
