@@ -1,7 +1,7 @@
 {
     "prefixes": {},
     "project": {
-        "shortcode": "0806",
+        "shortcode": "",
         "shortname": "webern",
         "longname": "Anton Webern Gesamtausgabe",
         "descriptions": "This is the special vocabulary for the Anton Webern Edition.",
@@ -1380,11 +1380,11 @@
                         "gui_attributes": {}
                     },
                     {
-                        "name": "ist ein Teil von (Quellenindex)",
+                        "name": "ist ein Teil von (Konvolut)",
                         "super": "hasValue",
                         "object": "LinkValue",
                         "labels": {
-                            "de": "ist ein Teil von (Quellenindex)"
+                            "de": "ist ein Teil von (Konvolut)"
                         },
                         "gui_element": "Searchbox",
                         "gui_attributes": {
@@ -1793,7 +1793,8 @@
                         "labels": {
                             "de": "Chronologie",
                             "fr": "Chronologie",
-                            "it": "Cronologia"
+                            "it": "Cronologia",
+                            "en": "Chronology"
                         },
                         "cardinalities": [
                             {
@@ -1873,7 +1874,9 @@
                         "super": "Resource",
                         "labels": {
                             "de": "Korrespondenz",
-                            "fr": "correspondance"
+                            "fr": "Correspondance",
+                            "it": "Corrispondenza",
+                            "en": "Correspondence"
                         },
                         "cardinalities": [
                             {
@@ -2008,7 +2011,7 @@
                             {
                                 "propname": "textincipit",
                                 "comments": {
-                                    "de": "Incipit eines Textes, Briefes, Liedtextes"
+                                    "en": "Incipit eines Textes, Briefes, Liedtextes"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2043,6 +2046,7 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "0-n"
@@ -2057,10 +2061,13 @@
                         ]
                     },
                     {
-                        "name": "Musikst\u00fcck (Moldenhauer-Nummer)",
+                        "name": "Musikst\u00fcck (AWG-ID)",
                         "super": "Resource",
                         "labels": {
-                            "de": "Musikst\u00fcck (Moldenhauer-Nummer)"
+                            "de": "Musikst\u00fcck (AWG-ID)",
+                            "fr": "Musique (AWG-ID)",
+                            "it": "Musica (AWG-ID)",
+                            "en": "Piece of music (AWG-ID)"
                         },
                         "cardinalities": [
                             {
@@ -2120,12 +2127,13 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "0-n"
                             },
                             {
-                                "propname": "further_non-edition_source_rt",
+                                "propname": "further_non_edition_source_rt",
                                 "comments": {
                                     "de": "Quelle zu einen Musikst\u00fcck, die f\u00fcr die Edition nicht relevant ist (posthumer Druck, etc.)"
                                 },
@@ -2151,7 +2159,10 @@
                         "name": "Werk",
                         "super": "Resource",
                         "labels": {
-                            "de": "Werk"
+                            "de": "Werk",
+                            "fr": "\u0152uvre",
+                            "it": "Opera",
+                            "en": "Work"
                         },
                         "cardinalities": [
                             {
@@ -2218,12 +2229,13 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "1-n"
                             },
                             {
-                                "propname": "further_non-edition_source_rt",
+                                "propname": "further_non_edition_source_rt",
                                 "comments": {
                                     "de": "Quelle zu einen Musikst\u00fcck, die f\u00fcr die Edition nicht relevant ist (posthumer Druck, etc.)"
                                 },
@@ -2256,7 +2268,10 @@
                         "name": "Vorstufe",
                         "super": "Resource",
                         "labels": {
-                            "de": "Vorstufe"
+                            "de": "Vorstufe",
+                            "fr": "\u00c9tat pr\u00e9liminaire",
+                            "it": "Stato preliminare",
+                            "en": "Preliminary stage"
                         },
                         "cardinalities": [
                             {
@@ -2288,6 +2303,7 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "1-n"
@@ -2319,7 +2335,10 @@
                         "name": "Person",
                         "super": "Resource",
                         "labels": {
-                            "de": "Person"
+                            "de": "Person",
+                            "fr": "Personne",
+                            "it": "Persona",
+                            "en": "Person"
                         },
                         "cardinalities": [
                             {
@@ -2395,6 +2414,27 @@
                                 "cardinality": "0-n"
                             },
                             {
+                                "propname": "literature_rt",
+                                "comments": {
+                                    "de": "Literaturnachweise zu einem gegebenen Objekt"
+                                },
+                                "cardinality": "0-n"
+                            },
+                            {
+                                "propname": "correspondence_rt",
+                                "comments": {
+                                    "de": "Nachweis in Korrespondez von/zu oder \u00fcber Anton Webern."
+                                },
+                                "cardinality": "0-n"
+                            },
+                            {
+                                "propname": "further_sources_rt",
+                                "comments": {
+                                    "de": "andere Quellen (als Literatur oder Korrespondenz) zu einem gegebenen Objekt"
+                                },
+                                "cardinality": "0-n"
+                            },
+                            {
                                 "propname": "comment_rt",
                                 "comments": {
                                     "de": "Unstrukturierte Bemerkungen zu einem Objekt"
@@ -2407,7 +2447,10 @@
                         "name": "[AWG] Quellenbeschreibung (MS)",
                         "super": "Resource",
                         "labels": {
-                            "de": "[AWG] Quellenbeschreibung (MS)"
+                            "de": "[AWG] Quellenbeschreibung (MS)",
+                            "fr": "[AWG] Description de la source",
+                            "it": "[AWG] Descrizione della fonte",
+                            "en": "[AWG] Source description (ms.)"
                         },
                         "cardinalities": [
                             {
@@ -2570,7 +2613,10 @@
                         "name": "Digitalisat (Korrespondenz)",
                         "super": "StillImageRepresentation",
                         "labels": {
-                            "de": "Digitalisat (Korrespondenz)"
+                            "de": "Digitalisat (Korrespondenz)",
+                            "fr": "Copie num\u00e9rique (correspondance)",
+                            "it": "Copia digitale (corrispondenza)",
+                            "en": "Digital copy (correspondence)"
                         },
                         "cardinalities": [
                             {
@@ -2594,7 +2640,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
@@ -2603,7 +2649,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
+                                    "en": "This property stands for the position within a set of ordered items (resources)"
                                 },
                                 "cardinality": "1"
                             },
@@ -2617,10 +2663,13 @@
                         ]
                     },
                     {
-                        "name": "Konvolut",
+                        "name": "Transkriptionstest (Korresp.)",
                         "super": "Resource",
                         "labels": {
-                            "de": "Konvolut"
+                            "de": "Transkriptionstest (Korresp.)",
+                            "fr": "Test de transcription (corresp.)",
+                            "it": "Test di trascrizione (corresp.)",
+                            "en": "Transcription test (corresp.)"
                         },
                         "cardinalities": [
                             {
@@ -2645,10 +2694,13 @@
                         ]
                     },
                     {
-                        "name": "Bibliothek",
+                        "name": "RISM-Referenz",
                         "super": "Resource",
                         "labels": {
-                            "de": "Bibliothek"
+                            "de": "RISM-Referenz",
+                            "fr": "R\u00e9f\u00e9rence du RISM",
+                            "it": "Riferimento RISM",
+                            "en": "RISM reference"
                         },
                         "cardinalities": [
                             {
@@ -2668,10 +2720,13 @@
                         ]
                     },
                     {
-                        "name": "Quellenindex",
+                        "name": "Konvolut",
                         "super": "Resource",
                         "labels": {
-                            "de": "Quellenindex"
+                            "de": "Konvolut",
+                            "fr": "Convolute",
+                            "it": "Convolute",
+                            "en": "Convolute"
                         },
                         "cardinalities": [
                             {
@@ -2692,14 +2747,14 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "0-1"
                             },
                             {
-                                "propname": "part_of_sourceindex",
+                                "propname": "part_of_convolute",
                                 "comments": {
-                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil eines Quellenindex ist. Zum Beispiel ist ein Quellenindex ein integraler Bestandteil genau eines anderen Quellenindexes."
+                                    "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil eines Konvoluts ist. Zum Beispiel ist ein Konvolut ein integraler Bestandteil genau eines anderen Konvoluts."
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2716,7 +2771,10 @@
                         "name": "Digitalisat (Musikst\u00fcck)",
                         "super": "StillImageRepresentation",
                         "labels": {
-                            "de": "Digitalisat (Musikst\u00fcck)"
+                            "de": "Digitalisat (Musikst\u00fcck)",
+                            "fr": "Copie num\u00e9rique (musique)",
+                            "it": "Copia digitale (brano musicale)",
+                            "en": "Digital copy (piece of music)"
                         },
                         "cardinalities": [
                             {
@@ -2756,7 +2814,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
@@ -2765,7 +2823,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
+                                    "en": "This property stands for the position within a set of ordered items (resources)"
                                 },
                                 "cardinality": "0-1"
                             },
@@ -2782,7 +2840,10 @@
                         "name": "Supplement",
                         "super": "Resource",
                         "labels": {
-                            "de": "Supplement"
+                            "de": "Supplement",
+                            "fr": "Suppl\u00e9ment",
+                            "it": "Supplemento",
+                            "en": "Supplement"
                         },
                         "cardinalities": [
                             {
@@ -2861,6 +2922,7 @@
                             {
                                 "propname": "source_rt",
                                 "comments": {
+                                    "de": "Eine zugeh\u00f6rige Ressource, von der die beschriebene Ressource abgeleitet ist. Die beschriebene Ressource kann ganz oder teilweise von der zugeh\u00f6rigen Ressource abgeleitet sein. Es wird empfohlen, die zugeh\u00f6rige Ressource mit Hilfe einer Zeichenkette zu identifizieren, die einem formalen Identifikationssystem entspricht.",
                                     "en": "A related resource from which the described resource is derived. The described resource may be derived from the related resource in whole or in part. Recommended best practice is to identify the related resource by means of a string conforming to a formal identification system."
                                 },
                                 "cardinality": "0-n"
@@ -2878,7 +2940,10 @@
                         "name": "Bibliografie",
                         "super": "Resource",
                         "labels": {
-                            "de": "Bibliografie"
+                            "de": "Bibliografie",
+                            "fr": "Bibliographie",
+                            "it": "Bibliografia",
+                            "en": "Bibliography"
                         },
                         "cardinalities": [
                             {
@@ -3049,7 +3114,10 @@
                         "name": "Digitalisat (Supplement)",
                         "super": "StillImageRepresentation",
                         "labels": {
-                            "de": "Digitalisat (Supplement)"
+                            "de": "Digitalisat (Supplement)",
+                            "fr": "Copie num\u00e9rique (suppl\u00e9ment)",
+                            "it": "Copia digitale (supplemento)",
+                            "en": "Digital copy (supplement)"
                         },
                         "cardinalities": [
                             {
@@ -3080,16 +3148,16 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
-                                "cardinality": "1"
+                                "cardinality": "0-1"
                             },
                             {
                                 "propname": "seqnum",
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
+                                    "en": "This property stands for the position within a set of ordered items (resources)"
                                 },
                                 "cardinality": "1"
                             },
@@ -3106,7 +3174,10 @@
                         "name": "[AWG] Quellenbeschreibung (Druck",
                         "super": "Resource",
                         "labels": {
-                            "de": "[AWG] Quellenbeschreibung (Druck"
+                            "de": "[AWG] Quellenbeschreibung (Druck",
+                            "fr": "Description de la source (impr.)",
+                            "it": "Descrizione della fonte (stampa)",
+                            "en": "[AWG] Source description (print)"
                         },
                         "cardinalities": [
                             {
@@ -3206,7 +3277,10 @@
                         "name": "Verlag",
                         "super": "Resource",
                         "labels": {
-                            "de": "Verlag"
+                            "de": "Verlag",
+                            "fr": "\u00c9diteur",
+                            "it": "Editore",
+                            "en": "Publishing house"
                         },
                         "cardinalities": [
                             {
@@ -3259,7 +3333,10 @@
                         "name": "Digitalisat (edierter Notentext)",
                         "super": "StillImageRepresentation",
                         "labels": {
-                            "de": "Digitalisat (edierter Notentext)"
+                            "de": "Digitalisat (edierter Notentext)",
+                            "fr": "Copie num\u00e9rique (texte \u00e9dit\u00e9)",
+                            "it": "Copia digitale (testo edito)",
+                            "en": "Digital copy (edited text)"
                         },
                         "cardinalities": [
                             {
@@ -3290,7 +3367,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
@@ -3299,7 +3376,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
+                                    "en": "This property stands for the position within a set of ordered items (resources)"
                                 },
                                 "cardinality": "1"
                             },
@@ -3316,7 +3393,10 @@
                         "name": "[AWG] Edierter Notentext",
                         "super": "Resource",
                         "labels": {
-                            "de": "[AWG] Edierter Notentext"
+                            "de": "[AWG] Edierter Notentext",
+                            "fr": "[AWG] Texte musical \u00e9dit\u00e9",
+                            "it": "[AWG] Testo musicale edito",
+                            "en": "[AWG] Edited musical text"
                         },
                         "cardinalities": [
                             {
@@ -3344,7 +3424,10 @@
                         "name": "Digitalisat (Quellen\u00fcbersicht)",
                         "super": "StillImageRepresentation",
                         "labels": {
-                            "de": "Digitalisat (Quellen\u00fcbersicht)"
+                            "de": "Digitalisat (Quellen\u00fcbersicht)",
+                            "fr": "Copie num\u00e9rique (aper\u00e7u des s.)",
+                            "it": "Copia digitale (panoram. d fonti",
+                            "en": "Digital copy (source overview)"
                         },
                         "cardinalities": [
                             {
@@ -3375,7 +3458,7 @@
                                 "propname": "part_of",
                                 "comments": {
                                     "de": "Diese Property bezeichnet eine Verbindung zu einer anderen Resource, in dem ausgesagt wird, dass die vorliegende Resource ein integraler Teil der anderen Resource ist. Zum Beispiel ist eine Buchseite ein integraler Bestandteil genau eines Buches.",
-                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. Es an example a page is an integral part of a book."
+                                    "en": "This property represents a connection to another resource where the given resource is an integral part of. As an example a page is an integral part of a book."
                                 },
                                 "cardinality": "1"
                             },
@@ -3384,7 +3467,7 @@
                                 "comments": {
                                     "de": "Diese Property bezeichnet die Position in einer geordneten Reihenfolge",
                                     "fr": "Cette \"property\" d\u00e9note la position dans un s\u00e9quence.",
-                                    "en": "This property stands for the position within a set of rdered items (resoucres)"
+                                    "en": "This property stands for the position within a set of ordered items (resources)"
                                 },
                                 "cardinality": "1"
                             },
