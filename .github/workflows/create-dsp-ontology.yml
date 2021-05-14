@@ -1,0 +1,52 @@
+name: Create Ontology with DSP-tools
+
+on:
+  workflow_dispatch: # trigger manually
+
+# globals
+env:
+  # dsp-api
+  DSP_API_REPO: musicEnfanthen/dsp-api
+  DSP_API_BRANCH: main
+  DSP_API_DIR: dsp-api-dir
+
+  # dsp-tools
+  DSP_TOOLS_REPO: musicEnfanthen/dsp-tools
+  DSP_TOOLS_BRANCH: main
+  DSP_TOOLS_DIR: dsp-tools-dir
+  
+  
+jobs:
+  build:
+    runs-on: macOS-10.15
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          path: ${{ env.DSP_TOOLS_DIR }}
+
+     # - name: Install prerequisites   # cf. https://docs.knora.org/04-publishing-deployment/getting-started/
+     #   run: sh ./.github/knora-prerequisites.sh
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+
+      - name: Install DSP-tools
+        working-directory: ${{ env.DSP_TOOLS_DIR }}
+        run: |
+          python -m pip install --upgrade pip
+          pip install dsp-tools
+      
+      - name: Set PYTHONPATH
+        working-directory: ${{ env.DSP_TOOLS_DIR }}
+        run: export PYTHONPATH=.
+
+      - name: Verify
+        working-directory: ${{ env.DSP_TOOLS_DIR }}
+        run: ls -R
+
+      - name: Validate ontology
+        working-directory: ${{ env.DSP_TOOLS_DIR }}
+        run: dsp-tools create ./1_salsah-model-extraction/webern_*.json --validate

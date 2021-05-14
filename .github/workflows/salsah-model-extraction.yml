@@ -54,7 +54,17 @@ jobs:
       - name: Validate extracted model via DSP-TOOLS
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: dsp-tools create webern_*.json --validate
-      
+
+      - name: Remove gaga file
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: |
+          if [ ! -f gaga.json ]; then
+            echo "No gaga file to remove."
+          else
+            echo "Removing gaga file."
+            rm gaga.json
+          fi
+
       - name: Check git status before commit
         run: |
           git config --get remote.origin.url
