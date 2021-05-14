@@ -3,9 +3,7 @@ import json
 import requests
 from datetime import datetime
 from pprint import pprint
-from typing import List, Set, Dict, Tuple, Optional
-
-import time
+from typing import Dict
 
 
 class Converter:
