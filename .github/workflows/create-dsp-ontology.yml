@@ -47,6 +47,10 @@ jobs:
         working-directory: ${{ env.DSP_TOOLS_DIR }}
         run: ls -R
 
-      - name: Validate ontology
+      - name: Validate extracted model via DSP-TOOLS
         working-directory: ${{ env.DSP_TOOLS_DIR }}
         run: dsp-tools create ./1_salsah-model-extraction/webern_*.json --validate
+
+      - name: Create ontology via DSP-TOOLS
+        working-directory: ${{ env.DSP_TOOLS_DIR }}
+        run: dsp-tools create ./1_salsah-model-extraction/webern_*.json -s ${{ secrets.TESTSERVER_URL }} -u ${{ secrets.TESTSERVER_USERNAME }} -p ${{ secrets.TESTSERVER_PW }}
