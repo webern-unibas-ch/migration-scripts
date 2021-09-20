@@ -40,6 +40,16 @@ jobs:
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: java -jar plantuml.jar -v -tsvg webern_*_plantuml.txt
       
+      - name: Remove temporary .txt file
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: |
+          if [ ! -f webern_*_plantuml.txt ]; then
+            echo "No txt file to remove."
+          else
+            echo "Removing txt file."
+            rm webern_*_plantuml.txt
+          fi
+      
       - name: Validate
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: ls -R
