@@ -58,6 +58,22 @@ jobs:
             done
           fi
 
+      - name: Check for existing SVG file
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: |
+          count=$(ls -1 *.svg 2>/dev/null | wc -l)         
+          if [ $count -ge 1 ]; then
+            echo "### Need to archive $count old file(s)..."
+            if [ ! -d $ARCHIVE_DIR/ ]; then
+              echo "Creating $ARCHIVE_DIR/ folder"
+              mkdir -p $ARCHIVE_DIR/
+            fi
+            for file in *.svg; do 
+              echo "Moving $file into $ARCHIVE_DIR/"
+              mv "$file" $ARCHIVE_DIR/
+            done
+          fi
+
       - name: Run extraction script
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: python SalsahModelToJson.py
