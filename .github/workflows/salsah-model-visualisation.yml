@@ -28,17 +28,18 @@ jobs:
           java-version: '11'
       - run: java -version
       
+      - name: Install PlantUML
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: wget -O plantuml.jar https://sourceforge.net/projects/plantuml/files/plantuml.jar
+      
       - name: Create visualization template
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: python VisualizeJson.py
-        
+      
+      - name: Create PlantUML SVG
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: java -jar plantuml.jar -v -tsvg webern_*_plantuml.txt
+      
       - name: Validate
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: ls -R
-      
-      - name: Install & run PlantUML
-        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
-        run: | 
-          wget -O plantuml.jar https://sourceforge.net/projects/plantuml/files/plantuml.jar
-          java -jar plantuml.jar -v -tsvg webern_*_plantuml.txt
-      
