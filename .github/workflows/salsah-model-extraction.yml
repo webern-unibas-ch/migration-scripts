@@ -69,6 +69,10 @@ jobs:
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
         run: python VisualizeJson.py
         
+      - name: Validate
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: ls -R
+      
       - name: Generate SVG Diagram
         uses: holowinski/plantuml-github-action@main
         with:
