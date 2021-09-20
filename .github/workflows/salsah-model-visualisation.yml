@@ -1,0 +1,29 @@
+name: Salsah Model Visualisation
+
+on:
+  workflow_dispatch: # trigger manually
+
+# globals
+env:
+  SCRIPT_DIR: 1_salsah-model-extraction
+  ARCHIVE_DIR: archive
+
+
+jobs:
+  extract_salsah_model:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      
+      - name: Set up Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin' # See 'Supported distributions' for available options
+          java-version: '11'
+      - run: java -cp java HelloWorldApp
