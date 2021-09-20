@@ -11,7 +11,7 @@ env:
 
 jobs:
   extract_salsah_model:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
