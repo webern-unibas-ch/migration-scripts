@@ -64,19 +64,6 @@ jobs:
             echo "Removing gaga file."
             rm gaga.json
           fi
-      
-      - name: Create visualization template
-        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
-        run: python VisualizeJson.py
-        
-      - name: Validate
-        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
-        run: ls -R
-      
-      - name: Generate SVG Diagram
-        uses: holowinski/plantuml-github-action@main
-        with:
-          args: -v -tsvg ./webern_*_plantuml.txt
 
       - name: Check git status before commit
         run: |
