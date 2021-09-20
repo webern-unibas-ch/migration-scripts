@@ -10,7 +10,7 @@ env:
 
 
 jobs:
-  extract_salsah_model:
+  visualise_salsah_model:
     runs-on: ubuntu-latest
 
     steps:
@@ -27,3 +27,18 @@ jobs:
           distribution: 'temurin' # See 'Supported distributions' for available options
           java-version: '11'
       - run: java -cp java HelloWorldApp
+      
+      - name: Create visualization template
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: python VisualizeJson.py
+        
+      - name: Validate
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: ls -R
+      
+      - name: Install & run PlantUML
+        working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
+        run: | 
+          wget -O plantuml.jar https://sourceforge.net/projects/plantuml/files/plantuml.jar
+          java -jar plantuml.jar -v -tsvg webern_*_plantuml.txt
+      
