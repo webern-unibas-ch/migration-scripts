@@ -499,6 +499,7 @@ if __name__ == '__main__':
 
     # This is a "blank" ontology. the json file is in the form we need in the new knora
     emptyOnto = {
+        "$schema": "https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/knora/dsplib/schemas/ontology.json",
         "prefixes": {},
         "project": {
             "shortcode": "",
