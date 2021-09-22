@@ -40,7 +40,7 @@ jobs:
 
       - name: Install DSP-tools
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
-        run: pip install dsp-tools==1.4.0
+        run: pip install dsp-tools
 
       - name: Check for existing JSON file
         working-directory: ${{ github.workspace }}/${{ env.SCRIPT_DIR }}
