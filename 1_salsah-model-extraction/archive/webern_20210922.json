@@ -1,5 +1,4 @@
 {
-    "$schema": "https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/knora/dsplib/schemas/ontology.json",
     "prefixes": {
         "dc": "http://purl.org/dc/terms/"
     },
