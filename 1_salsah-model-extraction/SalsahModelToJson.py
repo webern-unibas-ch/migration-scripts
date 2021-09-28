@@ -390,10 +390,10 @@ class Converter:
                                 # prepare properties pattern
                                 tmpOnto["project"]["ontologies"][0]["properties"].append({
                                     "name": "",
-                                    "super": [],
-                                    "object": "",
                                     "labels": {},
                                     "comments": {},
+                                    "super": [],
+                                    "object": "",
                                     "gui_element": "",
                                     "gui_attributes": {}
                                 })
