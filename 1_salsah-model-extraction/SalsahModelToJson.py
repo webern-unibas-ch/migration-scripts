@@ -394,8 +394,7 @@ class Converter:
                                     "comments": {},
                                     "super": [],
                                     "object": "",
-                                    "gui_element": "",
-                                    "gui_attributes": {}
+                                    "gui_element": ""
                                 })
 
                                 # fill in the name of the property
@@ -434,6 +433,9 @@ class Converter:
 
                                 # fill in all attributes (gui_attributes and resource pointer)
                                 if "attributes" in property and property["attributes"] != "" and property["attributes"] is not None:
+                                    tmpOnto["project"]["ontologies"][0]["properties"].append({
+                                        "gui_attributes": {}
+                                    })
                                     # split attributes entry
                                     finalSplit = []
                                     tmpstr = property["attributes"]
