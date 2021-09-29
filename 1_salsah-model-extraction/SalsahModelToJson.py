@@ -53,7 +53,6 @@ class Converter:
 
                     # Fill the description - if present - into the empty ontology
                     if project_info['description'] is not None:
-                        pprint(project_info['description'] )
                         tmpOnto["project"]["descriptions"] = dict(map(lambda a: (a['shortname'], a['description']), project_info['description']))
 
                     # Fill project keywords if present
@@ -247,8 +246,13 @@ class Converter:
                         pprint(resTypeInfo["class"])
                         #     exit()
 
+                    gui_order: int = 1
+
                     # fill in the cardinalities with propname and cardinality of occurences
                     for propertyId in resTypeInfo["properties"]:
+                        if propertyId['name'] == '__location__':
+                            continue
+
                         # check vocabulary of propertyId
                         propertyName = ""
                         if propertyId["vocabulary"].lower() is not None:
@@ -259,12 +263,13 @@ class Converter:
                             else:
                                 propertyName = ":" + propertyId["vocabulary"].lower() + "_" + propertyId["name"]
 
-                        if propertyName != "__location__":
-                            tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
-                                "propname": propertyName,
-                                # "gui_order": "",  # TODO gui_order not yet implemented by knora.
-                                "cardinality": str(propertyId["occurrence"])
-                            })
+                        tmpOnto["project"]["ontologies"][0]["resources"][-1]["cardinalities"].append({
+                            "propname": propertyName,
+                            "cardinality": str(propertyId["occurrence"]),
+                            'gui_order': gui_order
+                        })
+
+                        gui_order += 1
             else:
                 continue
 
