@@ -8,7 +8,10 @@
         "shortname": "webern",
         "longname": "Anton Webern Gesamtausgabe",
         "descriptions": {
-            "en": "This is the special vocabulary for the Anton Webern Edition."
+            "de": "Die Anton Webern Gesamtausgabe ist eine kritisch-historische Edition, die darauf abzielt, Weberns gesamtes Werk in wissenschaftlicher Form der Musikwissenschaft und -praxis zug\u00e4nglich zu machen. Die Ausgabe enth\u00e4lt nicht nur alle Werke, die Webern selbst zur Drucklegung weitergeleitet hat, sondern auch deren unver\u00f6ffentlichte Varianten. Dazu geh\u00f6ren auch Kompositionen, die zu Lebzeiten nie ver\u00f6ffentlicht wurden, Werke aus seiner Jugend- und Studienzeit sowie Fragmente, Skizzen, Arrangements und Bearbeitungen seiner und anderer Partituren.<br />\n<em>Link</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br />\n<em>Status</em>: <b>weitergehend</b><br />\n<em>Lizenz</em>: <b>restricted</b> (kontaktieren Sie DaSCH f\u00fcr weitere Informationen)",
+            "fr": "L'Anton Webern est une \u00e9dition critique et historique qui vise \u00e0 rendre l'ensemble de l'\u0153uvre de Webern accessible \u00e0 la pratique et \u00e0 l'\u00e9rudition musicale sous une forme savante. L'\u00e9dition comprend non seulement toutes les \u0153uvres que Webern lui-m\u00eame avait envoy\u00e9es pour \u00eatre imprim\u00e9es, mais aussi leurs versions in\u00e9dites. Il comprend \u00e9galement des compositions qui n'ont jamais \u00e9t\u00e9 rendues publiques de son vivant, des \u0153uvres de sa jeunesse et de ses ann\u00e9es d'\u00e9tudiant, ainsi que des fragments, des esquisses, des arrangements et des r\u00e9visions de ses partitions et d'autres.<br />\n<em>Lien</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br />\n<em>Statut</em>: <b>en cours</b><br />\n<em>Licence</em>: <b>restreinte</b> (contactez DaSCH pour plus d'informations)",
+            "it": "La Anton Webern Gesamtausgabe \u00e8 un'edizione storico-critica che mira a rendere l'intera opera di Webern accessibile all'erudizione e alla pratica musicale in forma accademica. L'edizione include non solo tutte le opere che Webern stesso ha fatto stampare, ma anche le loro varianti inedite. Include anche composizioni che non furono mai rese pubbliche durante la sua vita, opere della sua giovent\u00f9 e degli anni da studente, cos\u00ec come frammenti, schizzi, arrangiamenti e revisioni della sua e di altre partiture.<br />\n<em>Link</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br />\n<em>Stato</em>: <b>in corso</b><br />\n<em>Licenza</em>: <b>ristretta</b> (contattare DaSCH per ulteriori informazioni)",
+            "en": "The Anton Webern Gesamtausgabe is a critical-historical edition which aims to make Webern\u2019s entire oeuvre accessible to musical scholarship and practice in a scholarly form. The edition includes not only all the works Webern himself had forwarded to be printed but also their unpublished variants. It also includes compositions that were never made public in his lifetime, works from his youth and student years, as well as fragments, sketches, arrangements and revisions of his and other scores.<br />\n<em>Link</em>:<a href=\"http://data.dasch.swiss/webern\">http://data.dasch.swiss/webern</a><br />\n<em>Status</em>: <b>ongoing</b><br />\n<em>License</em>: <b>restricted</b> (contact DaSCH for further information)"
         },
         "keywords": [
             "Webern",
@@ -544,8 +547,6 @@
                 ]
             }
         ],
-        "groups": [],
-        "users": [],
         "ontologies": [
             {
                 "name": "webern",
