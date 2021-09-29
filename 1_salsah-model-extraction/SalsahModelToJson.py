@@ -28,29 +28,42 @@ class Converter:
         # pprint(result)
 
     # ==================================================================================================================
-    # Function that fills the shortname as well as the longname into the empty ontology. Uses https://www.salsah.org/api/projects for that
-    def fillShortLongName(self, project):
-        tmpOnto["project"]["shortname"] = project["shortname"]
-        tmpOnto["project"]["longname"] = project["longname"]
-
-    # ==================================================================================================================
-    # Fill in the project id's to the corrisponging projects. Using https://raw.githubusercontent.com/dhlab-basel/dasch-ark-resolver-data/master/data/shortcodes.csv
-    def fillId(self, project):
-        lines = salsahJson.r.text.split('\n')
-        for line in lines:
-            parts = line.split(',')
-            if len(parts) > 1 and parts[1] == project["shortname"]:
-                tmpOnto["project"]["shortcode"] = parts[0]
-                # print('Found Knora project shortcode "{}" for "{}"!'.format(tmpOnto["project"]["shortcode"], parts[1]))
-
-    # ==================================================================================================================
-    # Fill the description - if present - into the empty ontology
-    def fillDesc(self, project):
+    # Fill in the project info
+    def fillProjectInfo(self, project):
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
-            if vocabulary["description"] and vocabulary["shortname"].lower() == project["shortname"].lower():
-                tmpOnto["project"]["descriptions"].update({
-                    "en": vocabulary["description"]
-                })
+            if vocabulary["project_id"] == project["id"]:
+                # fetch project_info
+                req = requests.get(f'{self.serverpath}/api/projects/{vocabulary["shortname"]}?lang=all')
+                result = req.json()
+
+                if 'project_info' in result.keys():
+                    project_info = result['project_info']
+
+                    # Fill in shortname and longname of the project
+                    tmpOnto["project"]["shortname"] = project_info["shortname"]
+                    tmpOnto["project"]["longname"] = project_info["longname"]
+
+                    # Fill in the project shortcode. Using https://raw.githubusercontent.com/dhlab-basel/dasch-ark-resolver-data/master/data/shortcodes.csv
+                    lines = salsahJson.r.text.split('\n')
+                    for line in lines:
+                        parts = line.split(',')
+                        if len(parts) > 1 and parts[1] == project["shortname"]:
+                            tmpOnto["project"]["shortcode"] = parts[0]
+                            # print('Found Knora project shortcode "{}" for "{}"!'.format(tmpOnto["project"]["shortcode"], parts[1]))
+
+                    # Fill the description - if present - into the empty ontology
+                    if project_info['description'] is not None:
+                        pprint(project_info['description'] )
+                        tmpOnto["project"]["descriptions"] = dict(map(lambda a: (a['shortname'], a['description']), project_info['description'])),
+
+                    # Fill project keywords if present
+                    if project_info['keywords'] is not None:
+                        tmpOnto["project"]["keywords"] = list(
+                            map(lambda a: a.strip(), project_info['keywords'].split(',')))
+                    else:
+                        tmpOnto["project"]["keywords"] = [result['project_info']['shortname']]
+                else:
+                    continue
 
     # ==================================================================================================================
     # Fill in the vocabulary name and label
@@ -70,25 +83,6 @@ class Converter:
             tmpOnto["prefixes"].update({
                 prefix: prefixMap[prefix]
             })
-
-    # ==================================================================================================================
-    # Function responsible to get the keywords of the corresponding project
-    def fetchKeywords(self, project):
-        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
-            if vocabulary["project_id"] == projects["id"]:
-                # fetch project_info
-                req = requests.get(f'{self.serverpath}/api/projects/{vocabulary["shortname"]}?lang=all')
-                result = req.json()
-
-                if 'project_info' in result.keys():
-                    project_info = result['project_info']
-                    if project_info['keywords'] is not None:
-                        tmpOnto["project"]["keywords"] = list(
-                            map(lambda a: a.strip(), project_info['keywords'].split(',')))
-                    else:
-                        tmpOnto["project"]["keywords"] = [result['project_info']['shortname']]
-                else:
-                    continue
 
     # ==================================================================================================================
     # Function that fetches the lists for a correspinding project
@@ -508,8 +502,6 @@ if __name__ == '__main__':
             "descriptions": {},
             "keywords": [],
             "lists": [],
-            "groups": [],
-            "users": [],
             "ontologies": [{
                 "name": "",
                 "label": "",
@@ -536,14 +528,9 @@ if __name__ == '__main__':
             tmpOnto = copy.deepcopy(
                 emptyOnto)  # Its necessary to reset the tmpOnto for each project. Otherwhise they will overlap
             #pprint("FillShortLongName")
-            salsahJson.fillShortLongName(projects)  # Fill the shortname as well as the longname into the empty ontology.
-            #pprint("FillID")
-            salsahJson.fillId(projects)  # Fill in the project id's (shortcode) to the corresponding projects.
-            #pprint("FillDesc")
-            salsahJson.fillDesc(projects)  # Fill in the vocabulary name and label
+            salsahJson.fillProjectInfo(projects)  # Fill the shortname as well as the longname into the empty ontology.
             #pprint("FillVocName")
             salsahJson.fillVocName(projects)  # Fill in the vocabulary name and label
-            salsahJson.fetchKeywords(projects) #  Fills in the keywords of the corresponding project
             salsahJson.fetchLists(projects)
             #pprint("FetchRessources")
             salsahJson.fetchResources(projects)
