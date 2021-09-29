@@ -54,7 +54,7 @@ class Converter:
                     # Fill the description - if present - into the empty ontology
                     if project_info['description'] is not None:
                         pprint(project_info['description'] )
-                        tmpOnto["project"]["descriptions"] = dict(map(lambda a: (a['shortname'], a['description']), project_info['description'])),
+                        tmpOnto["project"]["descriptions"] = dict(map(lambda a: (a['shortname'], a['description']), project_info['description']))
 
                     # Fill project keywords if present
                     if project_info['keywords'] is not None:
