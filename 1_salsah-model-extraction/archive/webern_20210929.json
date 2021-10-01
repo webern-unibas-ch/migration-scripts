@@ -2292,43 +2292,53 @@
                         "cardinalities": [
                             {
                                 "propname": ":event_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":chronology_type",
-                                "cardinality": "1-n"
+                                "cardinality": "1-n",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":dc_date",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":daytime",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":place",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":placeGeo",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":literature_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":correspondence_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":further_sources_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 10
                             }
                         ]
                     },
@@ -2350,107 +2360,133 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":corresp_type",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":dc_creator",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":place",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":dc_date",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":corresp_writer",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":corresp_contributor",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":corresp_addressReturn",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":place_writer",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":date_autograph_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 10
                             },
                             {
                                 "propname": ":date_written",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 11
                             },
                             {
                                 "propname": ":date_sent",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 12
                             },
                             {
                                 "propname": ":corresp_recipient",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 13
                             },
                             {
                                 "propname": ":corresp_addressRecipient",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 14
                             },
                             {
                                 "propname": ":place_recipient",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 15
                             },
                             {
                                 "propname": ":date_received",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 16
                             },
                             {
                                 "propname": ":source_location_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 17
                             },
                             {
                                 "propname": ":reproduction",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 18
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 19
                             },
                             {
                                 "propname": ":textincipit",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 20
                             },
                             {
                                 "propname": ":content_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 21
                             },
                             {
                                 "propname": ":transcription_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 22
                             },
                             {
                                 "propname": ":literature_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 23
                             },
                             {
                                 "propname": ":context_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 24
                             },
                             {
                                 "propname": ":dc_source_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 25
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 26
                             }
                         ]
                     },
@@ -2472,55 +2508,68 @@
                         "cardinalities": [
                             {
                                 "propname": ":mnr_plus",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":mnr",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":url_gnd",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":date_composition",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":performance",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":date_firstpublication",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":firstpublisher",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":instrumentation_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":dc_source_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 10
                             },
                             {
                                 "propname": ":further_non_edition_source_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 11
                             },
                             {
                                 "propname": ":textsource_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 12
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 13
                             }
                         ]
                     },
@@ -2542,63 +2591,78 @@
                         "cardinalities": [
                             {
                                 "propname": ":opus_num",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":url_gnd",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":date_composition",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":performance",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":date_firstpublication",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":firstpublisher_rt",
-                                "cardinality": "1-n"
+                                "cardinality": "1-n",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":date_further_publication",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":further_publisher_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":instrumentation_rt",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 10
                             },
                             {
                                 "propname": ":dc_source_rt",
-                                "cardinality": "1-n"
+                                "cardinality": "1-n",
+                                "gui_order": 11
                             },
                             {
                                 "propname": ":further_non_edition_source_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 12
                             },
                             {
                                 "propname": ":textsource_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 13
                             },
                             {
                                 "propname": ":has_movement",
-                                "cardinality": "1-n"
+                                "cardinality": "1-n",
+                                "gui_order": 14
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 15
                             }
                         ]
                     },
@@ -2620,35 +2684,43 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":date_composition",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":performance",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":instrumentation_rt",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":dc_source_rt",
-                                "cardinality": "1-n"
+                                "cardinality": "1-n",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":has_movement",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":preopus_of",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 8
                             }
                         ]
                     },
@@ -2670,63 +2742,78 @@
                         "cardinalities": [
                             {
                                 "propname": ":salsah_lastname",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":salsah_firstname",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":alt_name_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":url_gnd",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":url_further_id",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":place_birth",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":date_birth",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":date_death",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":place_death",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":biography_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 10
                             },
                             {
                                 "propname": ":relation_webern_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 11
                             },
                             {
                                 "propname": ":literature_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 12
                             },
                             {
                                 "propname": ":correspondence_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 13
                             },
                             {
                                 "propname": ":further_sources_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 14
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 15
                             }
                         ]
                     },
@@ -2748,91 +2835,113 @@
                         "cardinalities": [
                             {
                                 "propname": ":sourcedesc_siglum",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":sourceDesc_label",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":source_location_rt",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":signature",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":signature_internal",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":ref_sourceIndex",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":sourceDesc_papermaterial_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":sourceDesc_writingmat_main_hl",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":sourceDesc_writingmat_further_hl",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 10
                             },
                             {
                                 "propname": ":sourceDesc_title_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 11
                             },
                             {
                                 "propname": ":date_autograph_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 12
                             },
                             {
                                 "propname": ":date_authentic",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 13
                             },
                             {
                                 "propname": ":date_estimated",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 14
                             },
                             {
                                 "propname": ":sourceDesc_pagination_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 15
                             },
                             {
                                 "propname": ":sourceDesc_beat_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 16
                             },
                             {
                                 "propname": ":sourceDesc_instruments_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 17
                             },
                             {
                                 "propname": ":sourceDesc_annotations_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 18
                             },
                             {
                                 "propname": ":content_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 19
                             },
                             {
                                 "propname": ":sourceDesc_corrections_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 20
                             },
                             {
                                 "propname": ":date_version",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 21
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 22
                             }
                         ]
                     },
@@ -2854,23 +2963,28 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":salsah_transcription",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 2
                             },
                             {
                                 "propname": "isPartOf",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": "seqnum",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 5
                             }
                         ]
                     },
@@ -2892,15 +3006,18 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":dc_date",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             }
                         ]
                     },
@@ -2922,11 +3039,13 @@
                         "cardinalities": [
                             {
                                 "propname": ":rism_sigle",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 2
                             }
                         ]
                     },
@@ -2948,19 +3067,23 @@
                         "cardinalities": [
                             {
                                 "propname": ":signature",
-                                "cardinality": "1-n"
+                                "cardinality": "1-n",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":part_of_convolute",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":owning_institution",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 4
                             }
                         ]
                     },
@@ -2982,31 +3105,38 @@
                         "cardinalities": [
                             {
                                 "propname": ":ref_mnr",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":filepath_original",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":published_in",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 4
                             },
                             {
                                 "propname": "isPartOf",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": "seqnum",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 7
                             }
                         ]
                     },
@@ -3028,55 +3158,68 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":corresp_type",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":dc_creator",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":place",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":dc_date",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":source_location_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":content_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":transcription_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":literature_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 10
                             },
                             {
                                 "propname": ":further_sources_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 11
                             },
                             {
                                 "propname": ":dc_source_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 12
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 13
                             }
                         ]
                     },
@@ -3098,95 +3241,118 @@
                         "cardinalities": [
                             {
                                 "propname": ":bibl_title_short",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":bibl_type",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":bibl_unpublished",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":dc_author",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":bibl_title_dependent_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":bibl_title_independent_rp",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":bibl_title_independent_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":editor",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":place_publisher",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":bibl_publisher",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 10
                             },
                             {
                                 "propname": ":ed_pubdate",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 11
                             },
                             {
                                 "propname": ":bibl_pages_type",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 12
                             },
                             {
                                 "propname": ":bibl_pages",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 13
                             },
                             {
                                 "propname": ":bibl_title_series_rt",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 14
                             },
                             {
                                 "propname": ":bibl_addition_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 15
                             },
                             {
                                 "propname": ":bibl_abstract_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 16
                             },
                             {
                                 "propname": ":bibl_online_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 17
                             },
                             {
                                 "propname": ":date_version",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 18
                             },
                             {
                                 "propname": ":bibl_usage",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 19
                             },
                             {
                                 "propname": ":bibl_status",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 20
                             },
                             {
                                 "propname": ":bibl_source_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 21
                             },
                             {
                                 "propname": ":bibl_location_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 22
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 23
                             }
                         ]
                     },
@@ -3208,27 +3374,33 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":filepath_original",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             },
                             {
                                 "propname": "isPartOf",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": "seqnum",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             }
                         ]
                     },
@@ -3250,55 +3422,68 @@
                         "cardinalities": [
                             {
                                 "propname": ":sourcedesc_siglum",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":sourceDesc_label",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":sourceDesc_impresssum",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":place_publisher",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":placeGeo",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":ref_publisher",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 6
                             },
                             {
                                 "propname": ":date_publication",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 7
                             },
                             {
                                 "propname": ":source_location_ED_used_rt",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 8
                             },
                             {
                                 "propname": ":source_location_ED_further_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 9
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 10
                             },
                             {
                                 "propname": ":sourceDesc_ED_title",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 11
                             },
                             {
                                 "propname": ":content_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 12
                             },
                             {
                                 "propname": ":salsah_comment",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 13
                             }
                         ]
                     },
@@ -3320,27 +3505,33 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_publisher",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":alt_name_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":url_gnd",
-                                "cardinality": "0-1"
+                                "cardinality": "0-1",
+                                "gui_order": 3
                             },
                             {
                                 "propname": ":salsah_address",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 4
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             }
                         ]
                     },
@@ -3362,27 +3553,33 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":filepath_original",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             },
                             {
                                 "propname": "isPartOf",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": "seqnum",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             }
                         ]
                     },
@@ -3404,15 +3601,18 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":sketch_commentary",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             }
                         ]
                     },
@@ -3434,27 +3634,33 @@
                         "cardinalities": [
                             {
                                 "propname": ":dc_title",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 1
                             },
                             {
                                 "propname": ":filepath_original",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 2
                             },
                             {
                                 "propname": ":dc_description_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 3
                             },
                             {
                                 "propname": "isPartOf",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 4
                             },
                             {
                                 "propname": "seqnum",
-                                "cardinality": "1"
+                                "cardinality": "1",
+                                "gui_order": 5
                             },
                             {
                                 "propname": ":salsah_comment_rt",
-                                "cardinality": "0-n"
+                                "cardinality": "0-n",
+                                "gui_order": 6
                             }
                         ]
                     }
