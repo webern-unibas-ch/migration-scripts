@@ -8,7 +8,7 @@ import json
 
 
 class Utils:
-    def camel_case(self, str: str, firstLetterCase = None):
+    def camel_case(self, str: str, firstLetterCase = None) -> str:
         """
         Helper function to transform a given string str to camelCase.
         firstLetterCase can take values 'upper' and 'lower'.
@@ -42,7 +42,7 @@ class Utils:
         else:
             return s
 
-    def camel_case_vocabulary_resource(self, str):
+    def camel_case_vocabulary_resource(self, str) -> str:
         """
         Helper function to transform a given vocabulary resource string
         to camelCase while leaving vocabulary untouched, e.g.: vocabulary:ResourceName
@@ -56,10 +56,10 @@ class Utils:
         else:
             return self.upper_camel_case(str)
 
-    def lower_camel_case(self, str):
+    def lower_camel_case(self, str) -> str:
         return self.camel_case(str, 'lower')
 
-    def upper_camel_case(self, str):
+    def upper_camel_case(self, str) -> str:
         return self.camel_case(str, 'upper')
 
 
