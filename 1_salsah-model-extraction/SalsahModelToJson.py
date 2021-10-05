@@ -65,8 +65,8 @@ class Converter:
                     continue
 
     # ==================================================================================================================
-    # Fill in the vocabulary name and label
-    def fillVocName(self, project):
+    # Fill in the vocabulary info
+    def fillVocInfo(self, project):
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
             if vocabulary["project_id"] == project["id"]:
                 tmpOnto["project"]["ontologies"][0]["name"] = vocabulary["shortname"]
@@ -542,7 +542,7 @@ if __name__ == '__main__':
             #pprint("FillShortLongName")
             salsahJson.fillProjectInfo(projects)  # Fill the shortname as well as the longname into the empty ontology.
             #pprint("FillVocName")
-            salsahJson.fillVocName(projects)  # Fill in the vocabulary name and label
+            salsahJson.fillVocInfo(projects)  # Fill in the vocabulary name and label
             salsahJson.fetchLists(projects)
             #pprint("FetchRessources")
             salsahJson.fetchResources(projects)
