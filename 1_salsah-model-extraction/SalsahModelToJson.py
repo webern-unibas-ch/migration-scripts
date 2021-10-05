@@ -285,7 +285,7 @@ class Converter:
 
                     # fill in the name
                     nameSplit = resTypeInfo["name"].split(":")
-                    tmpOnto["project"]["ontologies"][0]["resources"][-1]["name"] = nameSplit[1]
+                    tmpOnto["project"]["ontologies"][0]["resources"][-1]["name"] = utils.upper_camel_case(nameSplit[1])
 
                     # fill in the labels
                     if resTypeInfo["label"] is not None and isinstance(resTypeInfo["label"], list):
