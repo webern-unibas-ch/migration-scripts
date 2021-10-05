@@ -66,11 +66,17 @@ class Converter:
 
     # ==================================================================================================================
     # Fill in the vocabulary name and label
-    def fillVocName(self, projects):
+    def fillVocName(self, project):
         for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
-            if vocabulary["project_id"] == projects["id"]:
+            if vocabulary["project_id"] == project["id"]:
                 tmpOnto["project"]["ontologies"][0]["name"] = vocabulary["shortname"]
                 tmpOnto["project"]["ontologies"][0]["label"] = vocabulary["longname"]
+                if vocabulary["description"]:
+                    tmpOnto["project"]["ontologies"][0]["comment"].update({
+                        "en": vocabulary["description"]
+                    })
+                else:
+                    tmpOnto["project"]["ontologies"][0].pop("comment")
 
     # ==================================================================================================================
     # Fill in the vocabulary prefixes
@@ -510,6 +516,7 @@ if __name__ == '__main__':
             "ontologies": [{
                 "name": "",
                 "label": "",
+                "comment": {},
                 "properties": [],
                 "resources": []
             }]
