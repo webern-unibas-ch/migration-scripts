@@ -1,9 +1,66 @@
-import copy
-import json
-import requests
 from datetime import datetime
 from pprint import pprint
+from re import sub, search
 from typing import Dict
+import requests
+import copy
+import json
+
+
+class Utils:
+    def camel_case(self, str: str, firstLetterCase = None):
+        """
+        Helper function to transform a given string str to camelCase.
+        firstLetterCase can take values 'upper' and 'lower'.
+        :param str: given string to transform
+        :return: Transformed string (lowerCamelCase or UpperCamelCase
+
+        :example:
+        str = "transcriptionTest-for_endLess DeLuxe"
+        str2 = "TranscriptionTest"
+
+        camelCase(str, 'lower')) --> transcriptionTestForEndLessDeLuxe
+        camelCase(str2, 'lower') --> transcriptionTest
+        camelCase(str, 'upper') --> TranscriptionTestForEndLessDeLuxe
+        camelCase(str2, 'upper') --> TranscriptionTest
+        """
+        s = str
+        # Look for underscores, hyphens or white space
+        if search(r"(_|-|\s)+", str):
+            # Convert _ and - to white space
+            s = sub(r"(_|-)+", " ", str)
+            # Capitalize first character of a every substring (while keeping case of other letters)
+            s = ' '.join(substr[:1].upper() + substr[1:] for substr in s.split(' '))
+            # Remove white space
+            s = s.replace(" ", "")
+        if firstLetterCase == 'upper':
+            # Uppercase first character of complete string
+            return ''.join([s[0].upper(), s[1:]])
+        elif firstLetterCase == 'lower':
+            # Lowercase first character of complete string
+            return ''.join([s[0].lower(), s[1:]])
+        else:
+            return s
+
+    def camel_case_vocabulary_resource(self, str):
+        """
+        Helper function to transform a given vocabulary resource string
+        to camelCase while leaving vocabulary untouched, e.g.: vocabulary:ResourceName
+        :param str: given string to transform
+        :return: Transformed string
+        """
+        if len(str.split(':', 1)) == 2:
+            tmp_voc = str.split(':', 1)[0]
+            tmp_res = self.upper_camel_case(str.split(':', 1)[-1])
+            return ''.join(tmp_voc + ':' + tmp_res)
+        else:
+            return self.upper_camel_case(str)
+
+    def lower_camel_case(self, str):
+        return self.camel_case(str, 'lower')
+
+    def upper_camel_case(self, str):
+        return self.camel_case(str, 'upper')
 
 
 class Converter:
@@ -528,6 +585,9 @@ if __name__ == '__main__':
 
     # Creating the ontology object. This object will create the new jsons.
     salsahJson = Converter()
+
+    # Creating the helper functions object
+    utils = Utils()
 
     # Get current date to append to file name
     now = datetime.today().strftime('%Y%m%d')
