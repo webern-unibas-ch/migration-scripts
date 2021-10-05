@@ -87,7 +87,7 @@ class Converter:
     # ==================================================================================================================
     # Fill in the project info
     def fillProjectInfo(self, project):
-        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+        for vocabulary in salsahConverter.salsahVocabularies["vocabularies"]:
             if vocabulary["project_id"] == project["id"]:
                 # fetch project_info
                 req = requests.get(f'{self.serverpath}/api/projects/{vocabulary["shortname"]}?lang=all')
@@ -101,7 +101,7 @@ class Converter:
                     tmpOnto["project"]["longname"] = project_info["longname"]
 
                     # Fill in the project shortcode. Using https://raw.githubusercontent.com/dhlab-basel/dasch-ark-resolver-data/master/data/shortcodes.csv
-                    lines = salsahJson.r.text.split('\n')
+                    lines = salsahConverter.r.text.split('\n')
                     for line in lines:
                         parts = line.split(',')
                         if len(parts) > 1 and parts[1] == project["shortname"]:
@@ -124,7 +124,7 @@ class Converter:
     # ==================================================================================================================
     # Fill in the vocabulary info
     def fillVocInfo(self, project):
-        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+        for vocabulary in salsahConverter.salsahVocabularies["vocabularies"]:
             if vocabulary["project_id"] == project["id"]:
                 tmpOnto["project"]["ontologies"][0]["name"] = vocabulary["shortname"]
                 tmpOnto["project"]["ontologies"][0]["label"] = vocabulary["longname"]
@@ -149,7 +149,7 @@ class Converter:
     # ==================================================================================================================
     # Function that fetches the lists for a correspinding project
     def fetchLists(self, project):
-        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+        for vocabulary in salsahConverter.salsahVocabularies["vocabularies"]:
             if vocabulary["project_id"] == projects["id"]:
                 payload: dict = {
                     'vocabulary': vocabulary["shortname"],
@@ -257,7 +257,7 @@ class Converter:
             "__location__": "__location__"
         }
 
-        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+        for vocabulary in salsahConverter.salsahVocabularies["vocabularies"]:
             if project["id"] == vocabulary["project_id"]:
                 payload: dict = {
                     'vocabulary': vocabulary["shortname"],
@@ -407,7 +407,7 @@ class Converter:
         hlist_results = req2.json()
         hlists = hlist_results["hlists"]
 
-        for vocabulary in salsahJson.salsahVocabularies["vocabularies"]:
+        for vocabulary in salsahConverter.salsahVocabularies["vocabularies"]:
             if project["id"] == vocabulary["project_id"]:
                 payload: dict = {
                     'vocabulary': vocabulary["shortname"],
@@ -438,7 +438,7 @@ class Converter:
                                 else:
                                     propertyName = property["vocabulary"].lower() + "_" + property["name"]
                                     if property["vocabulary"].lower() != "salsah":
-                                        salsahJson.fillPrefixes(property["vocabulary"].lower())
+                                        salsahConverter.fillPrefixes(property["vocabulary"].lower())
                                         propertySuperValue = property["vocabulary"].lower() + ":" + property["name"].removesuffix("_rt") # remove possible suffix from super value
 
                             # exclude duplicates
@@ -583,8 +583,8 @@ if __name__ == '__main__':
     # Create an empty ontology
     tmpOnto = copy.deepcopy(emptyOnto)
 
-    # Creating the ontology object. This object will create the new jsons.
-    salsahJson = Converter()
+    # Creating the ontology converter object. This object will create the new jsons.
+    salsahConverter = Converter()
 
     # Creating the helper functions object
     utils = Utils()
@@ -593,21 +593,21 @@ if __name__ == '__main__':
     now = datetime.today().strftime('%Y%m%d')
 
     # Here the ontology object is being filled
-    for projects in salsahJson.salsahJson["projects"]:
+    for projects in salsahConverter.salsahJson["projects"]:
         # do only extract model for Webern project (id=6)
         if projects["id"] == "6":
             #pprint("Making Deepcopy")
             tmpOnto = copy.deepcopy(
                 emptyOnto)  # Its necessary to reset the tmpOnto for each project. Otherwhise they will overlap
             #pprint("FillShortLongName")
-            salsahJson.fillProjectInfo(projects)  # Fill the shortname as well as the longname into the empty ontology.
+            salsahConverter.fillProjectInfo(projects)  # Fill the shortname as well as the longname into the empty ontology.
             #pprint("FillVocName")
-            salsahJson.fillVocInfo(projects)  # Fill in the vocabulary name and label
-            salsahJson.fetchLists(projects)
+            salsahConverter.fillVocInfo(projects)  # Fill in the vocabulary name and label
+            salsahConverter.fetchLists(projects)
             #pprint("FetchRessources")
-            salsahJson.fetchResources(projects)
+            salsahConverter.fetchResources(projects)
             #pprint("FetchProperties")
-            salsahJson.fetchProperties(projects)
+            salsahConverter.fetchProperties(projects)
             # Create the new json files
             with open(projects["shortname"] + "_" + now + ".json", 'w') as jsonFile:
                 jsonFile.write(json.dumps(tmpOnto, indent=4))
